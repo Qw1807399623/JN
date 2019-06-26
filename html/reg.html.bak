@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ <link rel="stylesheet" type='text/css' href="css/my.css">
+ </head>
+ <body>
+   <img src="./png/slider-img-home.png" alt="" class='type'>
+   <div class='reg width'>
+	 <div align='center'><!-- 标题 -->
+		<h1 class='title'>战舰少女</h1>
+		<h3>///Warship Girls///</h3>
+	 </div>
+	 <div  align='center'class='double'><!-- 注册框 -->
+		<div class='width' align='left'><!-- 注册内容 -->
+			<div align='center'><!-- 账号 -->
+				<h3>注册账号</h3>
+				<input type='text' placeholder='输入账号' class='reg' id='uname'>
+			</div><br>
+			<div>
+				<input type="text" placeholder='输入手机号' class='reg' id='phone'>
+			</div><br>
+			<div><!-- 密码 -->
+				<input type="password" placeholder='8-16位数字、字母字符组合' class='reg' id='upwd'>
+			</div><br>
+			<div><!-- 重复密码 -->
+				<input type="password" placeholder='重复密码' class='reg' id='cpwd'>
+			</div><br>
+			<div>
+				<input type='text' placeholder='请输入姓名' class='reg' id='user_name'>
+			</div><br>
+			<div>
+				<input type="text" placeholder='请输入邮箱' class='reg' id='email'>
+			</div><br>
+			<div class='news'><!-- 验证码 -->
+				<input type="text" placeholder='输入验证码' class='yz' id='code'>
+				<button class='button'>发送验证码</button>
+			</div><br>
+			<div><!-- 注册协议 -->
+				<input type="checkbox">我已经阅读<a href="#">注册协议</a>与<a href="#">隐私保护政策</a>
+			</div><br>
+			<div><!-- 注册按钮 -->
+				<button class='reg' onclick='reg()'>注册</button>
+			</div><br>
+	    </div>
+	 </div>
+     <div><!-- 返回登录 -->
+		<p align='center'>已经有账号？<a href="login.html">登录</a>或者<a href="official.html">返回官网</a></p>
+	 </div>
+   </div>
+    <script>
+   		function reg(){
+   			var xhr=new XMLHttpRequest();
+   			xhr.onreadystatechange=function(){
+				console.log(xhr)
+   				if (xhr.readyState==4&&xhr.status==200)
+   				{
+   					var result=xhr.responseText;
+   					if (result==1)
+   					{
+   						alert('注册成功')
+						window.location.href='http://127.0.0.1:8080/login.html'
+   					}else if(result==0){
+   					    alert('注册失败')
+   					}else{
+					    alert(result)
+					}
+   				}
+   			}
+   			xhr.open('post','/zjsn/reg',true);
+   			xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+   			var formdata='uname='+uname.value+'&phone='+phone.value+'&upwd='+upwd.value+'&cpwd='+cpwd.value+'&user_name='+user_name.value+'&email='+email.value+'&code='+code.value;
+   			xhr.send(formdata)
+   		}
+   </script>
+ </body>
+</html>

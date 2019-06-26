@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+    <link rel="stylesheet" href="./css/my.css">
+ </head>
+ <body>
+  <img src="./png/slider-img-home.png" alt="" class='type'>
+   <div class='login width' align='center'>
+     <div align='center'><!-- 标题 -->
+	   	<h1 align='center' class='title'>战舰少女</h1>
+		<h3 align='center'>///Warship Girls///</h3>
+	 </div>
+     <div align='center' class='double'>
+	   <div class='width'>
+		 <div>
+		 	<h3>修改密码</h3>
+			<input type="text" placeholder='请输入绑定手机号' class='reg' id='phone'>
+		 </div><br>
+		 <div>
+			<input type="password" placeholder='新密码' class='reg' id='upwd'>
+		 </div><br>
+         <div>
+			<input type="password" placeholder='重新输入密码' class='reg' id='cpwd'>
+		 </div><br>
+		 <div>
+			<button class='reg' onclick='update()'>确定</button>
+		 </div><br>
+	   </div>
+	 </div>
+	 <div>
+		<p>返回登录？<a href="login.html">登录</a>或<a href="official.html">返回官网</a></p>
+	 </div>
+   </div>
+   <script>
+		function update(){
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+		  if (xhr.readyState==4&&xhr.status==200)
+			{
+				var result=xhr.responseText;
+				if (result==1)
+				{
+					alert('修改成功')
+					window.location.href='http://127.0.0.1:8080/login.html'
+				}else if(result==0){
+					alert('修改失败')
+				}else{
+					alert(result)
+				}
+			}
+		}
+		xhr.open('put','/zjsn/update',true);
+		var formdata='phone='+uname.value+'&upwd='+upwd.value+'&cpwd='+cpwd.value
+		xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded')
+		xhr.send(formdata)
+		}
+   </script>
+ </body>
+</html>

@@ -1,0 +1,71 @@
+const express=require('express');
+const pool=require('../pool.js');
+const body=require('body-parser');
+var router=express.Router();
+//注册
+router.post('/reg',(req,res)=>{
+	 var $uname=req.body.uname
+	 var $phone=req.body.phone
+	 var $upwd=req.body.upwd
+	 var $cpwd=req.body.cpwd
+	 var $user_name=req.body.user_name
+	 var $email=req.body.email
+	 var $code=req.body.code
+	 if (!$uname){res.send('请输入正确的账号');return}
+	 if (!$phone){res.send('请输入正确的手机号');return}
+	 if (!$upwd){res.send("密码为8-16位的数字，字母，字符(可包含!#$%&*,.:;<>?@^_`~)'");return}
+	 if (!$cpwd){res.send('请再次输入密码');return}
+	 if ($cpwd!=$upwd){res.send('两次输入的密码不一致');return}
+	 if (!$user_name){res.send('姓名不能为空');return}
+	 if (!$email){res.send('邮箱不能为空');return}
+	 if (!$code){res.send('验证码不能为空');return}
+	 var sql='INSERT INTO zjsn_user VALUES(?,?,?,?,?,?)'
+	 pool.query(sql,[null,$uname,$phone,$upwd,$user_name,$email],(err,result)=>{
+		 console.log(req.body,req.query)
+		if (err) {res.send('该手机号已经注册');return};
+		if (result.affectedRows>0)
+		{
+			res.send('1')
+		}else(
+			res.send('0')	
+			)
+	 })
+})
+//登录
+router.post('/login',(req,res)=>{
+	var $uname=req.body.uname;
+	var $upwd=req.body.upwd;
+	var sql='select * from zjsn_user where uname=? and upwd=?'
+	if (!$uname){
+		res.send('用户名不能为空')
+		return;
+	}
+	if (!$upwd){
+		res.send('密码不能为空')
+        return;
+	}
+	pool.query(sql,[$uname,$upwd],(err,result)=>{
+		if (err) throw err;
+		if (result.length>0){
+			res.send('1')
+		}else{
+			res.send('0')	
+		}
+	})
+})
+//修改
+router.put('/update',(req,res)=>{
+	var $phone=req.body.phone;
+	var $upwd=req.body.upwd;
+	var $cpwd=req.body.cpwd;
+	if (!$phone){res.send('请输入正确的手机号');return}
+	if (!$upwd){res.send('请输入密码');return}
+	if (!$cpwd){res.send('请再次输入密码');return}
+	if ($cpwd!=$upwd){res.send('两次输入的密码不一致')}
+	var sql='update zjsn_user set upwd=? where phone=?'
+	pool.query(sql,[$upwd,$phone],(err,result)=>{
+		if (err) throw err;
+		res.send('1')
+	})
+})
+module.exports=router;

@@ -1,0 +1,41 @@
+#headerBar{height:50px;filter:progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#CCFFFFFF', endColorstr='#CCFFFFFF');background:rgba(255,255,255,.9);font-size:14px;color:#575757}
+.barContent{width:1000px;margin:0 auto}
+.barContent .bar-left{float:left;padding:5px 0;line-height:40px}
+.barContent .bar-left .spLogo img{display:block;margin-right:20px}
+.barContent .bar-left span{float:left;font-size:14px}
+.barContent .bar-left span .logo{margin-right:10px}
+.barContent .bar-left span a{font-size:16px}
+.barContent .bar-left span.bar-line{margin:0 10px;color:#d9d9d9;font-size:14px}
+.loginArea span{cursor:pointer}
+.loginArea span.bar-line{margin:0 5px;color:#d9d9d9;cursor:auto}
+.bar-right .bar-login,.barContent .bar-right .menu{display:inline-block;*display:inline;*zoom:1}
+.barContent .bar-right .menu{cursor:pointer;position:relative;z-index:10;font-size:14px}
+.barContent .bar-right .menu.logined{top:-20px}
+.barContent .menu:hover{color:#e74c3c}
+.barContent .menu p i{display:inline-block;width:15px;height:12px;vertical-align:middle;*vertical-align:2px;margin-left:5px;background:url(http://cdn2.guopan.cn/frontend/pc/static/img/headerGuiderDropIcon_6890a51.png?__sprite) no-repeat}
+.barContent .menu .menu-c{position:absolute;width:500px;height:0;overflow:hidden;background:#fff;right:0;border:0 solid #ddd;padding:0;z-index:35;opacity:0;transition:opacity ease .3s}
+.barContent .menu:hover .menu-c{border-width:1px;height:auto;padding:10px;opacity:1}
+.barContent .menu .menu-c .area1,.menu .menu-c .area3{float:left;width:100px}
+.barContent .menu .menu-c .area3{width:300px}
+.barContent .menu .menu-c .title{height:30px;line-height:30px;color:#e74c3c;font-size:14px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding:0 8px}
+.barContent .menu .menu-c .content{border-right:1px dashed #ddd;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding:0 8px}
+.barContent .menu .menu-c .area1.last .content{border-right:0}
+.barContent .menu .menu-c .content a{color:#575757;display:block;height:20px;line-height:20px;font-size:14px;margin-top:10px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+.barContent .menu .menu-c .area3 .content a{width:33.333%;float:left}
+.barContent .menu .menu-c .content a:hover{color:#e74c3c}
+.barContent .bar-right{float:right;line-height:50px}
+.bar-right .bar-login{margin-right:10px}
+.bar-right .bar-login a{cursor:pointer;margin-right:10px;padding-left:5px}
+.bar-login .login_after{position:relative;z-index:111;cursor:pointer;color:#e73c44}
+.login_after>a{color:#E73C44}
+.bar-login .login_after .welcome{}
+.userInfo{display:none;padding-top:11px;position:absolute;left:50%;top:19px;top:18px\9\0;*top:17px;margin-left:-275px;width:552px}
+.userInfo .u_allow{width:23px;height:11px;position:absolute;top:1px;left:50%;margin-left:-12px;background:url(http://cdn2.guopan.cn/frontend/pc/static/img/allow_85285d0.png?__sprite) no-repeat}
+.userInfo .userInfo_m{background:#fff;border:1px solid #ddd}
+.userInfo .userInfo_m dt,.userInfo_list li{overflow:hidden;_zoom:1}
+.userInfo .userInfo_m span{float:left;text-align:center;font-size:12px;height:45px;line-height:45px;padding:0;color:#000}
+.userInfo .userInfo_m dt span{font-size:16px}
+.userInfo_m dt span,.userInfo_list li span{width:33.3333%}
+.userInfo .userInfo_m dt{background:#f5f2f2;color:#000}
+.userInfo .userInfo_m .userInfo_list li.odd{background:#fbfafa}
+.bar-login .login_after:hover .userInfo{display:block}

@@ -1,0 +1,1 @@
+define("gpgame:widget/zone/modules/301/301.js",function(){"use strict";$(".module-301").each(function(){var e=$(this);e.find(".tabs span").on("mouseover",function(){$(this).parent().children().removeClass("active").eq($(this).index()).addClass("active"),e.find(".info-list").addClass("hide").eq($(this).index()).removeClass("hide")})})});

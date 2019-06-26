@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>注册账号</title>
+  <link rel="stylesheet" href="./css/my.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./css/Download Animate.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+		<style>
+		img:hover{
+			animation:pulse 2s;
+		}
+	</style>
+ </head>
+ <body>
+  <div class="row w-100">
+	  <div class="col-8">
+		     <img src="./png/slider-img-home.png" alt="" class='w-98 '>
+	  </div>
+	  <div class="col-4 mt-5">
+		 <div class='my_title m-auto'></div><!-- 标题 -->
+			<div class="login_bg w-100 pt-4"><!-- 注册内容 -->
+				<div class="w-75 m-auto">
+					<div><!-- 账号 -->
+						<h1 class='text-center font-weight-bold'>注册账号</h31>
+						<div id='d1' class='danger'></div>
+						<input type='text' placeholder='输入账号' id='uname'  class='form-control p-2 mt-4'>
+					</div>
+					<div>
+						<input type="text" placeholder='输入手机号' id='phone'  class='form-control p-2 mt-4 mb-4'>
+					</div>
+					<div><!-- 密码 -->
+						<input type="password" placeholder='8-16位数字、字母字符组合'id='upwd'  class='form-control p-2 mt-4 mb-4'>
+					</div>
+					<div><!-- 重复密码 -->
+						<input type="password" placeholder='重复密码' id='cpwd'  class='form-control p-2 mt-4 mb-4'>
+					</div>
+					<div>
+						<input type='text' placeholder='请输入姓名' id='user_name'  class='form-control p-2 mt-4 mb-4'>
+					</div>
+					<div>
+						<input type="text" placeholder='请输入邮箱' id='email'  class='form-control p-2 mt-4 mb-4'>
+					</div>
+					<div class='row  m-0'><!-- 验证码 -->
+						<input type="text" placeholder='输入验证码' id='code'  class='form-control col-8'>
+						<button  class='col-4 btn btn-primary'>发送验证码</button>
+					</div>
+					<div class="mt-2"><!-- 注册协议 <--><label for="box">
+						<input type="checkbox" id='box' value='1'>我已经阅读<a href="xieyi.html">注册协议</a>与<a href="yinsi.html">隐私保护政策</a></label>
+
+					</div>
+					<div><!-- 注册按钮 -->
+						<button onclick='reg()'  class='btn btn-primary w-100 mb-3'>注册</button>
+					</div>
+				</div>
+			</div>
+			 <div class="w-100 text-center mt-2 font-weight-bold">
+				<p>已经有账号？<a href="login.html">登录</a>或者<a href="official.html">返回官网</a></p>
+		 	</div>
+   	  </div>
+			 <div class='footer_menu'>
+				<!-- 版本号 -->
+					<div>
+						<a href="">要完新闻</a> | <a href="">招聘信息</a> | <a href="">要完网络</a> | <a href="">联系我们</a>
+					</div>
+					<div>
+						<p class='m-0'>本公司游戏产品适合16岁以上成年人使用 
+							<a href=""> 用户服务协议</a>
+							<a href=""> 未成年人家长监护工程</a>
+						</p>
+						<p class="m-0">
+							抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防上当受骗 适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活
+						</p>
+						<p class="m-0">
+							Copyright ©2013-2016 Moefantasy 上海要完网络科技有限公司 All Rights Reserved
+						</p>
+						<a href="">粤OVQ备26153551号-3</a><a href="">文网游备字〔2019〕M-RPG 3548 号</a><a href="">沪网文 [2019] 0397-790号
+						</a>
+					</div>
+	 </div>
+	  </div>
+	
+</div>
+<script src='./js/post.js'></script>
+ </body>
+</html>

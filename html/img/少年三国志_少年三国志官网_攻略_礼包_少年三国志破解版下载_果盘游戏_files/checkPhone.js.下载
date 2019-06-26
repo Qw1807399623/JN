@@ -1,0 +1,98 @@
+/**
+* 签名算法
+* Sign.init(data)
+* @param {Object} data - 参数
+* return sign  返回签名字符串
+ * @require gpgame:static/js/sign.js
+*/
+
+String .prototype.trim = function(){
+    var matches = this.match(/^[ \t\n\r]+/);
+    var prefixLength = (matches == null) ? 0:matches[0].length;
+    matches = this.match(/[ \t\r\n]+$/);
+    var suffixLength = (matches == null) ? 0:matches[0].length;
+    return this.slice(prefixLength,this.length-suffixLength);
+}
+window.recheck = function(){
+    this.url  = "/user/api/validateImg_new.php";
+    this.bd = $("body");
+    this.testDeferred = $.Deferred();
+    this.html = "<div class='reCheckGetCode'><div class='box'><div class='title'>请验证你是不是机器人:</div><div><img id='recheckImg' onclick=\"pop.initForm.renewCapcha('recheckImg')\"><input type='text' id='reCheckGetCode'autocomplete='off'autocorrect='off'autocapitalize='off'spellcheck='false'></div><div class='sub'><a class='btn-cancle'>取消</a><a class='btn-sure'>确定</a></div><div class='result'></div></div></div><div class='reCheckGetCode-cover'></div>";
+    this.bindUI = function(){
+        if(!$(".reCheckGetCode").length){
+            this.bd.append(this.html);
+        }
+        this.rcc = this.bd.find(".reCheckGetCode");
+        this.rcci = this.rcc.find("input");
+        this.rccr = this.rcc.find(".result");
+        this.rcci.off("focus").on("focus",$.proxy(function(){
+            this.rcci.removeClass("error");
+            this.rcc.find(".btn-sure").removeClass("disable");
+            this.rccr.stop().fadeOut().next(".reCheckGetCode-cover").hide();
+        },this)).off("input propertychange").on("input propertychange",function(){
+            $(this).val($(this).val().trim());
+        })
+        this.rcc.off("click",".btn-cancle:not('.disable')").on("click",".btn-cancle:not('.disable')",$.proxy(function(){
+            this.bd.removeClass("no-scroll");
+            this.rcc.stop().fadeOut().next(".reCheckGetCode-cover").hide();
+            this.gc.removeClass("disable");
+            this.rcci.val("");
+            this.rccr.hide();
+            this.rcc.find(".disable").removeClass("disable");
+        },this));
+        this.bd.off("click",".reCheckGetCode-cover").on("click",".reCheckGetCode-cover",function(){
+            return false;
+        })
+    };
+    this.setUI = function(){
+        this.bd.addClass("no-scroll");
+        var t = "50%",
+            l = "50%";
+        if(this.gc.length){
+            t = this.gc.offset().top-(130-this.gc.height());
+            l = this.gc.offset().left-(244-this.gc.width());
+        }
+        this.rcc.css({
+            "top" : t,
+            "left": l,
+            "margin-top" : this.gc.length ? "auto" : "-107px",
+            "margin-left": this.gc.length ? "auto" : "-50px",
+        })
+        pop.initForm.renewCapcha('recheckImg');
+        this.rcc.stop().fadeIn().next(".reCheckGetCode-cover").show();
+    }
+    this.startTest= function(){  /*phone,& the btn is required*/
+        var _this = this,
+            testDF = _this.testDeferred;
+        // if(arguments[0]){
+            _this.gc = $(arguments[0]);
+            _this.setUI();   // set test ui position
+            _this.rcc.off("click",".btn-sure:not('.disable')").on("click",".btn-sure:not('.disable')",function(){
+                var ts = $(this);
+                if(_this.rcci.val().trim()){
+                    // ts.addClass("disable");
+                    // $.get(_this.url,{code: _this.rcci.val()}, $.noop, 'json').done(function(d){
+                    //     if(d==0){
+                            testDF.resolve(_this.rcci.val());
+                            _this.rcc.stop().fadeOut();
+                            _this.rcci.val("");
+                            _this.rcc.next(".reCheckGetCode-cover").hide()
+                            _this.bd.removeClass("no-scroll");
+                        // }else {
+                        //     _this.rccr.text(d.msg).stop().fadeIn();
+                        // }
+                    // })
+                }else {
+                    _this.rcci.addClass("error");
+                }
+            });
+        // }else {
+        //     /*no arguments ,then return false;*/
+        //     testDF.reject(_this.reCheckText[6]);
+        // }
+    };
+    this.init = function(){
+        this.bindUI();
+    }
+}
+// recheck.init();

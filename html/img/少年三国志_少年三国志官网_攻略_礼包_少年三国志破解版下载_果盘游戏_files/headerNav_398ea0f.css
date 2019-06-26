@@ -1,0 +1,18 @@
+.spacia_search{width:245px;position:absolute;bottom:56px;right:0;z-index:10;background-color:rgba(0,0,0,.6);-ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);zoom:1}
+.spacia_search{padding:12px}
+.spacia_search .searchText{float:left;width:197px;background:#fff;padding:5px;height:20px;line-height:20px;border:2px solid #e74c3c;font-size:14px}
+.spacia_search .searchBtn{cursor:pointer;float:left;width:34px;height:34px;background-image:url(http://cdn2.guopan.cn/frontend/pc/static/img/spcial_search_5b04fe8.png?__sprite);background-repeat:no-repeat;background-position:2px 5px;background-color:#e74c3c;border:0}
+.spacia_navbox{width:1000px;margin:0 auto;height:350px;position:relative}
+.spacia_nav_box{position:absolute;bottom:0;left:0;width:100%}
+.spacia_navlist{height:54px;background:#300F06;border-bottom:2px #E74C3C solid}
+.spacia_navlist li{width:124px;height:54px;line-height:54px;text-align:center;color:#fff;float:left}
+.spacia_navlist li a{color:#fff;text-decoration:none;display:block;font-size:16px;font-weight:700}
+.spacia_navlist li a.on{background:#e73c44;color:#fff}
+.spacia_navlist li a:hover{background:#e73c44;color:#fff;text-decoration:none;display:block}
+.spacia_smalnav{width:1000px;display:block;padding:0 15px}
+.spacia_smalnav li{height:28px;line-height:28px;float:left;overflow:hidden}
+.spacia_smalnav li.spe{height:28px;line-height:28px;color:#666;padding:0 8px;float:left}
+.spacia_sites{height:18px;line-height:18px;color:#000;background:#F5F1EE}
+.spacia_sites a{color:#000;text-decoration:none}
+.spacia_sites a.red{color:#e54d42}
+.spacia_sites a:hover{color:#e54d42;text-decoration:none}

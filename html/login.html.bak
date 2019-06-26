@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/my.css">
+ </head>
+ <body>
+   <img src="./pmg/slider-img-home.png" alt="" class='type'>
+   <div class='login width' align='center'>
+     <div align='center'><!-- 标题 -->
+	   	<h1 class='title'>战舰少女</h1>
+		<h3>///Warship Girls///</h3>
+	 </div>
+     <div align='center' class='double'><!-- 登录框-->
+	   <div class='width'><!-- 登录账号 -->
+		 <div><!-- 账号 -->
+		 	<h3>登录账号</h3>
+			<input type="text" placeholder='账号' class='reg' id='uname'>
+		 </div><br>
+		 <div><!-- 密码 -->
+			<input type="password" placeholder='密码' class='reg' id='upwd'>
+		 </div><br>
+		 <div align='right'>
+		    <a href="update.html">忘记密码</a>
+		 </div><br>
+		 <div>
+			<button class='reg' onclick='login()'>登录</button>
+		 </div><br>
+	   </div>
+	 </div>
+	 <div><!-- 注册账号 -->
+		<p>还没有账号？<a href="reg.html">注册</a>或<a href="official.html">返回官网</a></p>
+	 </div>
+   </div>
+ <script>
+	function login(){
+		var xhr=new XMLHttpRequest();
+		xhr.onreadystatechange=function(){
+			if (xhr.readyState==4&&xhr.status==200)
+			{
+				var result=xhr.responseText;
+				if (result==1)
+				{
+					alert('登陆成功')
+					window.location.href='http://127.0.0.1:8080/official.html'
+				}else if (result==0)
+				{
+					alert('用户名或者密码错误')
+				}else{
+					alert(result)
+				}
+			}
+		};
+		xhr.open('post','/zjsn/login',true);	
+		xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+		var formdata='uname='+uname.value+'&upwd='+upwd.value;
+		xhr.send(formdata);
+	}
+ </script>
+ </body>
+</html>
