@@ -62,25 +62,25 @@
     height:220px;
 }
 .index_header{
-    height: 1050px;
+    height: 1050px;width:100%;
     background: url(../png/bg_index1.png) no-repeat;
     position: relative;
 }
 .index2{
-    height:1050px;
+    height:1050px;width:100%;
     background: url(../png/bg_index2.jpg) no-repeat;
     position: relative;
 }
 .index3{
-    height:1050px;
+    height:1050px;width:100%;
     background: url(../png/bg_index3.jpg) no-repeat;
 }
 .index4{
-    height:1050px;
+    height:1050px;width:100%;
     background: url(../png/bg_index4.jpg) no-repeat;
 }
 .index5{
-    height:1050px;
+    height:1050px;width:100%;
     background: url(../png/bg_index5.jpg) no-repeat;
 }
 .index_download{
@@ -114,21 +114,52 @@
     margin:5px 0;
 }
 .new_box{
+    width:60%;height:350px;
     position: absolute;;
-    bottom:350px;left:450px;
+    bottom:350px;left:550px;
 }
 .new_banner{
-    width:650px !important;height:400px;
+    width: 100%;
     background: url(../png/news-left.png) no-repeat;
     background-size: contain;
+    padding:0 !important;
 }
 .new_news{
-    width:550px !important;height:380px;
+    width: 100%;
     background: url(../png/news-right.png) no-repeat;
     background-size: contain;
+    padding:0 !important;
 }
 .new_jpg{
-    width:500px !important;height:300PX;
+    width:85% !important;
     margin:30px 30px 0;
+    background-size:contain !important;
 }
-.carousel-inner{}
+.carousel-indicators{
+    position:relative !important;
+    top:5px !important;
+}
+.carousel-indicators>li{
+    height:20px !important;width:20px !important;
+    border-radius:50%;
+}
+.news_box{
+    width:80%;
+    padding:40px 0 0 40px;
+}
+.news_box_header{
+    border-bottom:1px solid #ffffff;
+}
+.news_box_header>span{
+    font: bold 20px"微软雅黑" !important;
+    margin:0 30px;
+    color: #ffffff;
+    padding-bottom:10px;
+}
+.news_font>span,.news_font>span>a{
+    font-size:15px !important;
+    color: #ffffff !important;
+}
+.news_style>span{
+    background:rgba(0,0,0,0) !important;
+}
