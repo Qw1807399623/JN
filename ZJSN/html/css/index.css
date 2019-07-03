@@ -74,6 +74,7 @@
 .index3{
     height:1050px;width:100%;
     background: url(../png/bg_index3.jpg) no-repeat;
+    overflow: hidden;
 }
 .index4{
     height:1050px;width:100%;
@@ -162,4 +163,12 @@
 }
 .news_style>span{
     background:rgba(0,0,0,0) !important;
+}
+.section_img{
+    position: relative;
+    left:60%;
+    width:60%;height:100%;
+    background-image: url(../png/slider-img-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
