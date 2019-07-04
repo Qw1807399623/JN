@@ -179,7 +179,6 @@
 }
 .section_png>img{
     width:23rem;
-    z-index:10;
 }
 .section_portrait_con{
     width:60%;
@@ -202,15 +201,58 @@
     border:5px solid #FFBE00;
 }
 .introduce{
-    position:absolute;
-    top:63%;left:5%;
+    position:absolute !important;
+    top:63%;left:5% !important;
 }
 .big_png{
     height:1050px;
-    position:absolute;
-    right:0;bottom:0;
+    position:absolute !important;
+    right:0;bottom:0 !important;
     z-index:1;
+    transition:2s;
+}
+.big_png:hover{
+    transform:scale(1.05);
 }
 .text-overflow{
     text-overflow : clip,
+}
+#d1{
+    display: none;
+}
+#d2:hover #d1{
+    display: block;
+}
+.garllery_box{
+    width:60%;height:60%;
+    position: relative;
+    top: 25%;left:20%;
+    display:flex;
+}
+.grallery_group{
+    width:70%;height:100%;
+    background-color:#aaaaaa;
+}
+.grallery_title{
+    width:30%;height:80%;
+    background-color: rgb(25,25,25);
+}
+.title_box{
+    width: 100%;height:126px;
+    border-bottom:2px solid #000;
+    text-align:center !important;
+    line-height:126px;
+}
+.title_box>a{
+    width:100%;
+    color:#fff;
+    font-size:30px;
+}
+.group_box{
+    width:90%;height:90%;
+    margin:5% !important;
+}
+.group_box>div{
+    height:50%;
+    overflow: hidden;
 }
