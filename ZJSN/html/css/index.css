@@ -65,11 +65,13 @@
     height: 1050px;width:100%;
     background: url(../png/bg_index1.png) no-repeat;
     position: relative;
+    overflow:hidden;
 }
 .index2{
     height:1050px;width:100%;
     background: url(../png/bg_index2.jpg) no-repeat;
     position: relative;
+    overflow:hidden;
 }
 .index3{
     height:1050px;width:100%;
@@ -79,10 +81,12 @@
 .index4{
     height:1050px;width:100%;
     background: url(../png/bg_index4.jpg) no-repeat;
+    overflow:hidden;
 }
 .index5{
     height:1050px;width:100%;
     background: url(../png/bg_index5.jpg) no-repeat;
+    overflow:hidden;
 }
 .index_download{
     position: absolute;;
@@ -157,18 +161,56 @@
     color: #ffffff;
     padding-bottom:10px;
 }
-.news_font>span,.news_font>span>a{
+.news_font{
     font-size:15px !important;
     color: #ffffff !important;
 }
 .news_style>span{
     background:rgba(0,0,0,0) !important;
 }
-.section_img{
-    position: relative;
-    left:60%;
-    width:60%;height:100%;
-    background-image: url(../png/slider-img-home.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.my_section{
+    width:80%;height:1050px;
+    position: absolute;;
+    left:20%;
+}
+.section_png{
+    position: absolute;
+    top:300px;
+}
+.section_png>img{
+    width:23rem;
+    z-index:10;
+}
+.section_portrait_con{
+    width:60%;
+    position: absolute;;
+    bottom:15%;
+    z-index:10;
+}
+.icon{
+    width:7rem;
+}
+.small_box{
+    background-color:rgba(255,255,255,.2);
+}
+.small_png{
+    height:112px;
+    margin-left:5%;
+    z-index:10;
+}
+.small_png:hover{
+    border:5px solid #FFBE00;
+}
+.introduce{
+    position:absolute;
+    top:63%;left:5%;
+}
+.big_png{
+    height:1050px;
+    position:absolute;
+    right:0;bottom:0;
+    z-index:1;
+}
+.text-overflow{
+    text-overflow : clip,
 }
