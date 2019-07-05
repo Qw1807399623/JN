@@ -1,3 +1,6 @@
+a{
+    text-decoration:none !important;
+}
 .my_title{
     width: 180px;height:70px;
     background-image:url(../png/title.png);
@@ -155,17 +158,21 @@
 .news_box_header{
     border-bottom:1px solid #ffffff;
 }
-.news_box_header>span{
+.news_box_header>div>a{
     font: bold 20px"微软雅黑" !important;
-    margin:0 30px;
     color: #ffffff;
-    padding-bottom:10px;
-}
+} 
+.news_box_header>div>a:hover{
+    color:#FFBE00;
+} 
 .news_font{
     font-size:15px !important;
     color: #ffffff !important;
 }
-.news_style>span{
+.news_font:hover:hover{
+    color:#FFBE00 !important;
+}
+.news_style>div{
     background:rgba(0,0,0,0) !important;
 }
 .my_section{
@@ -249,10 +256,49 @@
     font-size:30px;
 }
 .group_box{
-    width:90%;height:90%;
+    width:90% !important;height:90% !important;
     margin:5% !important;
 }
 .group_box>div{
     height:50%;
     overflow: hidden;
+}
+.title_box:hover{
+    background: #FFBE00;
+}
+.group_box.carousel-item.active{
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+.view_box{
+    width:65%;height:50%;
+    position: relative;
+    top:30%;left:18%;
+}
+.view_title{
+    width: 269px;
+    height: 53px;
+    background:url(../png/view_til_bg.png);
+    text-align: center;
+    line-height:53px;
+    font-weight: bold;
+    position:relative;
+    top:20px;left:150px;
+    color: #fff
+}
+.view_left{
+    width:35%;
+    position: relative;
+    top:40px;left:120px;
+    padding-bottom:10px;
+    font-size:20px;
+    color:#ffffff;
+    letter-spacing:5px
+}
+.view_img{
+    position: absolute;
+    top:5%;right:11%;
+}
+.view_button{
+    width:5rem;
 }
