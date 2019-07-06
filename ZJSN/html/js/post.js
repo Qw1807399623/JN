@@ -8,7 +8,7 @@ var  login=function(){
 				if (result==1)
 				{
 					alert('登陆成功')
-					window.location.href='http://127.0.0.1:8080/official.html'
+					window.location.href='http://127.0.0.1:8080/index.html'
 				}else if (result==0)
 				{
 					d1.innerHTML='用户名或者密码错误';
