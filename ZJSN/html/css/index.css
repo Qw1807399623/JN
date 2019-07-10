@@ -9,16 +9,17 @@ a{
     margin-top:5px
    }
 .header_bg{
-    width:100%;height:80px;
+    width:1920px;height:80px;
     background: #191919;
 }
 .header_box{
-    width:60%;height:80px;
+    width:1140px;height:80px;
     line-height: 80px;
     margin:0 auto;
 }
 .header_chunk{
-    width:10%;height:80px;
+    width:115px;height:80px;
+    min-width:115px;
     float:left;
     text-align: center;
     display: block;
@@ -31,11 +32,11 @@ a{
     text-decoration: none;
 }
 .footer_bg{
-    width:100%;height:220px;
+    width:1920px;height:220px;
     background: #000;
 }
 .footer_box{
-    width:70%;height:220px;
+    width:1332px;height:220px;
     margin:0 auto;
 }
 .footer_box_header{
@@ -53,7 +54,7 @@ a{
     text-decoration:none;
 }
 .my_header,.my_footer{
-    width:100%;
+    width:1920px;
 }
 .my_header{
     height:80px;
@@ -62,31 +63,27 @@ a{
     height:220px;
 }
 .index_header{
-    height: 1050px;width:100%;
+    height: 1050px;width:1920px;
     background: url(../png/bg_index1.png) no-repeat;
     position: relative;
-    overflow:hidden;
 }
 .index2{
-    height:1050px;width:100%;
+    height:1050px;width:1920px;
     background: url(../png/bg_index2.jpg) no-repeat;
     position: relative;
-    overflow:hidden;
 }
 .index3{
-    height:1050px;width:100%;
+    height:1050px;width:1920px;
     background: url(../png/bg_index3.jpg) no-repeat;
     overflow: hidden;
 }
 .index4{
-    height:1050px;width:100%;
+    height:1050px;width:1920px;
     background: url(../png/bg_index4.jpg) no-repeat;
-    overflow:hidden;
 }
 .index5{
-    height:1050px;width:100%;
+    height:1050px;width:1920px;
     background: url(../png/bg_index5.jpg) no-repeat;
-    overflow:hidden;
 }
 .index_download{
     position: absolute;;
@@ -122,15 +119,18 @@ a{
     width:60%;height:350px;
     position: absolute;;
     bottom:350px;left:550px;
+    flex-wrap: nowrap !important;
 }
 .new_banner{
     width: 100%;
+    min-width:570px;
     background: url(../png/news-left.png) no-repeat;
     background-size: contain;
     padding:0 !important;
 }
 .new_news{
     width: 100%;
+    min-width:570px;
     background: url(../png/news-right.png) no-repeat;
     background-size: contain;
     padding:0 !important;
