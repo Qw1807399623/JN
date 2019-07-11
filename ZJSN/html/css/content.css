@@ -32,3 +32,6 @@
 .news_content_box>a{
     color: #000000
 }
+.news_header.carousel-indicators{
+    top: 0px !important
+}
