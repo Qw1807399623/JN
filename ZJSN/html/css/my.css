@@ -26,7 +26,7 @@ body{
     background-size:cover;
     }
 	.bold{
-		font:bold;
+		font:bold !important;
   }
   .footer_menu{
     width:50%;
