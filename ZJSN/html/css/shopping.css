@@ -24,7 +24,7 @@
     height:490px;
 }
 .shop_header{
-    width:100%;height:450px;
+    width:1110px;height:450px;
 }
 .header_box{
     width:100%;
@@ -42,6 +42,7 @@
 }
 .shop_bg{
     background-image: url(../png/shop_bg.jpg);
+    min-width:1920px;
 }
 .carousel-control-next,.carousel-control-prev{
     width:3% !important;height:20%;
@@ -52,5 +53,161 @@
 .shop_left{
     width:190px;
 }
+.recommended{
+    width:100%;height:482px;
+    position: relative;
+}
+.recommended_jpg{
+    width:314px;height:482px;
+    overflow: hidden;
+        cursor: pointer;
+}
+.recommended_jpg_top{
+    width:314px;height:482px;
+    background-image: url(../png/推荐1.jpg);
+    transition:1s;
+}
+.recommended_jpg_bottom{
+    width:314px;height:482px;
+    background-image: url(../png/买买买1.jpg)
+}
+.recommended_jpg:hover .recommended_jpg_top{
+    margin-top:-482px;
+}
 
+.recommended_jpg1{
+    width:422px;height:241px;
+    position: absolute;
+    top:0;left:314px;   
+    overflow: hidden;
+        cursor: pointer;
+}
+.recommended_jpg1_top{
+    width:422px;height:241px;
+    background-image: url(../png/推荐2.jpg);
+    transition:1s;
+}
+.recommended_jpg1_bottom{
+    width:422px;height:241px;
+    background-image: url(../png/买买买2.jpg);
+}
+.recommended_jpg1:hover .recommended_jpg1_top{
+    margin-top:-241px;
+}
+
+.recommended_jpg2{
+    width:210px;height:241px;
+    position: absolute;
+    top:0;left:736px; 
+    overflow: hidden;
+        cursor: pointer;
+}
+.recommended_jpg2_top{
+    width:210px;height:241px;
+    background-image: url(../png/推荐3.jpg);
+    transition:1s;
+}
+.recommended_jpg2_bottom{
+    width:210px;height:241px;
+    background-image: url(../png/买买买3.jpg);
+}
+.recommended_jpg2:hover .recommended_jpg2_top{
+    margin-top:-241px;
+}
+
+.recommended_jpg3{
+    width:210px;height:241px;
+    position: absolute;
+    top:242px;left:314px;
+    overflow: hidden;
+        cursor: pointer;
+}
+.recommended_jpg3_top{
+    width:210px;height:241px;
+    background-image: url(../png/推荐4.jpg);
+    transition:1s;
+}
+.recommended_jpg3_bottom{
+    width:210px;height:241px;
+    background-image: url(../png/买买买4.jpg);
+}
+.recommended_jpg3:hover .recommended_jpg3_top{
+    margin-top:-241px;
+}
+
+.recommended_jpg4{
+    width:210px;height:241px;
+    position: absolute;
+    top:242px;left:525px;
+    overflow: hidden;
+        cursor: pointer;
+}
+.recommended_jpg4_top{
+    width:210px;height:241px;
+    background-image: url(../png/推荐5.jpg);
+    transition:1s;
+}
+.recommended_jpg4_bottom{
+    width:210px;height:241px;
+    background-image: url(../png/买买买5.jpg);
+}
+.recommended_jpg4:hover .recommended_jpg4_top{
+    margin-top:-241px;
+}
+
+.recommended_jpg5{
+    width:210px;height:241px;
+    position: absolute;
+    top:242px;left:736px;
+    overflow: hidden;
+        cursor: pointer;
+}
+.recommended_jpg5_top{
+    width:210px;height:241px;
+    background-image: url(../png/推荐6.jpg);
+    transition:1s;
+}
+.recommended_jpg5_bottom{
+    width:210px;height:241px;
+    background-image: url(../png/买买买6.jpg);
+}
+.recommended_jpg5:hover .recommended_jpg5_top{
+    margin-top:-241px;
+}
+
+.hot{
+    width:950px;height:432px;
+    background-image: url(../png/c19_bg1.png);
+    padding:0 86px;
+    border:1px solid rgba(0,0,0,0);
+}
+.galo_bg{
+    width:340px;height:340px;
+    background-color:#5E3C32;
+    margin-top:40px;
+    border:1px solid rgba(0,0,0,0);
+    float:left;
+}
+.galo{
+    width:320px;height:320px;
+    background-image:url(../png/galo.jpg);
+    margin:10px 10px 10px
+}
+.galo_price{
+    width:380px;height:390px;
+    float:right;
+}
+.galo_price_bg{
+    width:380px;height:71px;
+    background-color: #037BBA;
+    margin-top:140px;
+}
+.galo_price_bg>h1{
+    color:#ffffff;
+    line-height:71px;
+}
+.galo_price_bg_bottom{
+    width:100%;height:49px;
+    background-color:#000000;
+}
 
