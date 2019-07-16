@@ -1,0 +1,143 @@
+.shoppingcar{
+    width:1190px;
+    background-color:#fff;
+}
+input{
+    cursor: pointer;
+}
+.shoppingcar>div:nth-child(1){
+    height:50px;
+    margin:15px 0;
+}
+.shoppingcar>div:nth-child(2){
+    width:1190px;
+    display:inline-block;
+    border-bottom:1px solid #e6e6e6
+}
+.all_shop{
+    font-size:20px;
+    font-weight: bold;
+    color:#ff4400;
+    float: left;
+    border-bottom:2px solid #ff4400;
+    padding:0 10px 5px 10px;
+}
+.font_color{
+    color:#ff4400;
+}
+.top_settle{
+    background: #aaa;
+    color: #fff;
+    display:block;
+    width:55px;height:25px;
+    text-align: center;
+    margin-left:5px;
+    border-radius:0.1rem;
+}
+.shop_title{
+    height:50px;
+    display:flex;
+}
+.shop_title>div:nth-child(1){
+    width:125px;
+    line-height: 50px;
+    text-align: center;
+}
+.shop_title>div:nth-child(2){
+    width:342px;
+    line-height: 50px;
+}
+.shop_title>div:nth-child(3){
+    width:220px;
+}
+.shop_title>div:nth-child(4){
+    width:130px;
+    line-height: 50px;
+}
+.shop_title>div:nth-child(5){
+    width:120px;
+    line-height: 50px;
+}
+.shop_title>div:nth-child(6){
+    width:140px;
+    line-height: 50px;
+}
+.shop_title>div:nth-child(7){
+    width:140px;
+    line-height: 50px;
+}
+.select_box{
+    width:15px;height:15px;
+    border:1px solid #e6e6e6;
+    display: inline-block;
+}
+.shop_menu{
+    width:1190px;
+    background: #fff8e1;
+    border:1px solid #e6e6e6;
+}
+.shop_menu>div{
+    width:100%;
+    height:130px;
+    border:1px solid #e6e6e6;
+    padding:10px 0;
+}
+.shop_menu>div>div:nth-child(1){
+    width:40px;
+}
+.shop_menu>div>div:nth-child(2){
+    width:342px;
+    display: flex;
+    margin-right:20px;
+}
+.shop_menu>div>div:nth-child(3){
+    width:252px;
+}
+.shop_menu>div>div:nth-child(4){
+    width:130px;
+}
+.shop_menu>div>div:nth-child(5){
+    width:120px;
+    display: flex
+}
+.shop_menu>div>div:nth-child(6){
+    width:140px;
+    color:#ff4400
+}
+.shop_menu>div>div:nth-child(7){
+    width:140px;
+}
+.img80{
+    height:80px;width:80px;
+    display: inline
+}
+.img80 + div{
+    height:100%;
+    display:inline;
+}
+.buy_shop{
+    width:100%;height:50px;
+    background: #e5e5e5;
+    display: flex
+}
+.buy_shop>div:nth-child(1),.buy_shop>div:nth-child(2){
+    width:55px;
+    text-align: center;
+    line-height:50px;
+}
+.buy_shop>div:nth-child(3){
+    width:450px;
+    margin-left:auto;
+    text-align: center;
+    line-height:50px;
+    display: flex
+}
+.gobuy{
+    width:120px;height:50px;
+    background:#b0b0b0;
+    color:#fff;
+    text-align: center;
+    margin-left:auto;
+    cursor: pointer;
+}
+
