@@ -24,7 +24,7 @@
         <div class="container">
             <div class="shoppingcar">
                 <div>
-                    <h1>购物车</h1>
+                    <h1 class="font-weight-bold">购物车</h1>
                 </div>
                 <div>
                     <div class="all_shop">全部商品</div>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="shop_title">
                     <div>
-                        <input type="checkbox">全选
+                        <input type="checkbox" id="all">全选
                     </div>
                     <div>
                         商品信息
@@ -50,6 +50,43 @@
                 <div class="shop_menu">
                     <div class="row m-0">
                         <div>
+                            <input type="checkbox" class="float-right"> 
+                        </div>
+                        <div>
+                            <div>
+                                <img src="png/galo.jpg" alt="" class="img80">
+                            </div>
+                            <div>
+                                <a href="galo.html" class="text-black">
+                                    幻萌官方店 战舰少女R galo毛绒玩偶 小号（20cm）
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="text-black">
+                                颜色分类：B款 胡德
+                            </div>
+                            <div class="text-black">
+                                大小：外框15*10cm，底座5*5
+                            </div>
+                        </div>
+                        <div class="price">￥50.00</div>
+                        <div>
+                            <div class="row dalo_many">
+                                    <div class="btnn">-</div>
+                                    <div class="">1</div>
+                                    <div class="btnn">+</div>
+                            </div>
+                        </div>
+                        <div class="total">￥50.00</div>
+                        <div>
+                            <a href="javascript:;">删除</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop_menu">
+                    <div class="row m-0">
+                        <div>
                             <input type="checkbox" class="float-right">
                         </div>
                         <div>
@@ -57,30 +94,28 @@
                                 <img src="png/galo.jpg" alt="" class="img80">
                             </div>
                             <div>
+                                <a href="galo.html" class="text-black">
                                     幻萌官方店 战舰少女R galo毛绒玩偶 小号（20cm）
+                                </a>
                             </div>
                         </div>
                         <div>
-                            <div>
+                            <div class="text-black">
                                 颜色分类：B款 胡德
                             </div>
-                            <div>
+                            <div class="text-black">
                                 大小：外框15*10cm，底座5*5
                             </div>
                         </div>
-                        <div>
-                            ￥50.00
-                        </div>
+                        <div class="price">￥50.00</div>
                         <div>
                             <div class="row dalo_many">
-                                    <div class="">-</div>
+                                    <div class="btnn">-</div>
                                     <div class="">1</div>
-                                    <div class="">+</div>
+                                    <div class="btnn">+</div>
                             </div>
                         </div>
-                        <div>
-                            ￥65.00
-                        </div>
+                        <div class="total">￥50.00</div>
                         <div>
                             <a href="javascript:;">删除</a>
                         </div>
@@ -88,7 +123,6 @@
                 </div>
                 <div class="buy_shop">
                     <div>
-                        <input type="checkbox">全选
                     </div>
                     <div>
                         <a href="javascript:;">删除</a>
@@ -97,7 +131,9 @@
                         <div class="mr-5">
                             已选商品0件
                         </div>
-                        <div>合计（不含运费）： 0.00</div>
+                        <div>合计（不含运费）:
+                        </div>
+                        <div class="font_color">￥0.00</div>
                         <div class="gobuy">结算</div>
                     </div>
                 </div>
@@ -182,5 +218,6 @@
     <footer class="my_footer">
         <iframe class="my_footer" src="footer.html" frameborder="0" scrolling="no"></iframe>
     </footer>   
+    <script src="js/shopping.js"></script>
 </body>
 </html>

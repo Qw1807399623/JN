@@ -118,26 +118,42 @@ input{
 .buy_shop{
     width:100%;height:50px;
     background: #e5e5e5;
-    display: flex
 }
-.buy_shop>div:nth-child(1),.buy_shop>div:nth-child(2){
-    width:55px;
+.buy_shop>div:nth-child(2){
+    width:100px;
     text-align: center;
     line-height:50px;
+    display: inline-block
 }
 .buy_shop>div:nth-child(3){
-    width:450px;
+    width:500px;
     margin-left:auto;
     text-align: center;
     line-height:50px;
-    display: flex
+    float:right !important;
+}
+.buy_shop>div:nth-child(3)>div{
+    display: inline-block
 }
 .gobuy{
     width:120px;height:50px;
     background:#b0b0b0;
     color:#fff;
     text-align: center;
-    margin-left:auto;
     cursor: pointer;
+    float: right;
 }
+.text-black{
+    color:#000000;
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
 
