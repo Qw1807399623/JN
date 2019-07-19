@@ -1,7 +1,20 @@
 // 购物车
 var car=document.getElementsByClassName("shoppingcar")[0];
 var buy=document.getElementsByClassName("buy_shop")[0].children[2].children[2];
-console.log(buy);
+var mytotal=document.getElementsByClassName("total")
+function calc(){
+    var truechb=car.querySelectorAll(".shop_menu input");
+    console.log(truechb)
+    buy.innerHTML = `￥0.00`;
+    for(var i=0,sum=0;i<truechb.length;i++){
+        if(truechb[i].checked==true){
+            var total=mytotal[i].innerHTML.slice(1);
+            sum+=parseFloat(total);
+            buy.innerHTML=`￥${sum.toFixed(2)}`
+        }
+    }
+}
+calc();
 car.onclick=function(e){
     var btn=e.target;
     if(btn.className=="btnn"){
@@ -16,14 +29,9 @@ car.onclick=function(e){
         var menu=btn.parentNode.parentNode.parentNode;
         var price=parseFloat(menu.children[3].innerHTML.slice(1));
         var subtotal=price*n;
-        var total=menu.children[5];
-        total.innerHTML=`￥${subtotal.toFixed(2)}`
-        var prices=car.querySelectorAll(".shop_menu .row .total");
-        var sum=0
-        for(var item of prices){
-            sum+=parseFloat(item.innerHTML.slice(1));
-        }
-        buy.innerHTML=`￥${sum.toFixed(2)}`
+        var totals=menu.children[5];
+        totals.innerHTML=`￥${subtotal.toFixed(2)}`
+        calc();
     }
 }
 // 全选
@@ -35,6 +43,7 @@ chbAll.onclick=function(){
     for(var chb of chbs){
         chb.checked=chbAll.checked
     }
+    calc()
 }
 for(var chb of chbs){
     chb.onclick=function(){
@@ -47,6 +56,7 @@ for(var chb of chbs){
                 chbAll.checked=true;
             }
         }
+        calc()
     }
 }
 
